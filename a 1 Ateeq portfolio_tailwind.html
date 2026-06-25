@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Intimate — Portfolio (Tailwind)</title>
+  <meta name="description" content="Personal & agency portfolio built with HTML + TailwindCSS" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* small custom styles */
+    .scroll-snap { scroll-snap-type: y proximity; }
+    .progress-bg { background: linear-gradient(90deg, rgba(59,130,246,0.9), rgba(139,92,246,0.9)); }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+  <!-- NAV -->
+  <header class="bg-white shadow fixed w-full z-30">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex justify-between items-center py-4">
+        <a href="#home" class="text-2xl font-extrabold">ATEEQ RANA</a>
+        <nav class="hidden md:flex space-x-6">
+          <a href="#home" class="hover:text-indigo-600">Home</a>
+          <a href="#services" class="hover:text-indigo-600">Services</a>
+          <a href="#about" class="hover:text-indigo-600">About</a>
+          <a href="#portfolio" class="hover:text-indigo-600">Portfolio</a>
+
+          <a href="#contact" class="hover:text-indigo-600">Contact</a>
+        </nav>
+        <div class="md:hidden">
+          <button id="menuBtn" class="p-2 rounded-md hover:bg-gray-100">☰</button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+      <div class="px-4 pb-4 space-y-2">
+        <a href="#home" class="block">Home</a>
+        <a href="#services" class="block">Services</a>
+        <a href="#about" class="block">About</a>
+        <a href="#portfolio" class="block">Portfolio</a>
+        <a href="#blog" class="block">Blog</a>
+        <a href="#contact" class="block">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-20">
+    <!-- HERO -->
+    <section id="home" class="py-20 bg-gradient-to-b from-white to-indigo-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <p class="text-sm uppercase tracking-wider text-indigo-600">Hello, I am</p>
+            <h1 class="text-4xl md:text-5xl font-extrabold mt-2">Ateeq Ur Rehman</h1>
+            <p class="mt-4 text-lg text-gray-600">Front-End Developer & Creative UI/UX Designer | I craft responsive, user-friendly websites and engaging digital experiences with a balance of beauty and functionality.</p>
+            <div class="mt-6 flex space-x-3">
+              <a href="#about" class="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg shadow hover:bg-indigo-700">Hire Me</a>
+              <a href="#portfolio" class="inline-flex items-center px-6 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50">My Work</a>
+            </div>
+            <div class="mt-8 grid grid-cols-3 gap-4">
+              <div class="text-center">
+                <h3 class="text-2xl font-bold">2</h3>
+                <p class="text-sm text-gray-500">World Wide Client</p>
+              </div>
+              <div class="text-center">
+                <h3 class="text-2xl font-bold">1</h3>
+                <p class="text-sm text-gray-500">Years Experience</p>
+              </div>
+              <div class="text-center">
+                <h3 class="text-2xl font-bold">10</h3>
+                <p class="text-sm text-gray-500">Projects</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhk-Y4kAgNRDGGVZJreqA9rJ1s4UoG72pzeiYPcMwN4L_Mh4eVY9tRECLNpW1peQYP6R6lL_ssYeSwHqELUNcAu5O55ECmVwBgolMGJzAednZtNfHAd3TuWMh1mhclRUKeUTHCByxp65ZKFEfyyVHaSmkYVxSkQSJ1UW-FQ1Kvy0SdOaqgIHxzzi9EFAN80/s16000/%F0%9F%92%AB%D9%85%D8%B9%DB%8C%D8%A7%D8%B1%20%D8%A8%D9%86%D8%A7%D8%A4%20%D9%BE%DB%81%DA%86%D8%A7%D9%86%20%D9%86%DB%81%DB%8C%20%D9%84%D9%88%DA%AF%20%D8%B3%D9%85%D8%AC%DA%BE%D8%AF%D8%A7%D8%B1%20%DB%81%DB%8C%DA%BA%20%D8%AE%D9%88%D8%AF%20%D9%BE%DB%81%DA%86%D8%A7%D9%86%20%D9%84%DB%8C%D9%86%DA%AF%DB%92%F0%9F%A6%85.webp" alt="profile" class="rounded-2xl shadow-lg w-full max-w-md object-cover">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center">
+          <h2 class="text-3xl font-extrabold">Services</h2>
+          <p class="mt-2 text-gray-600">What I offer</p>
+        </div>
+        <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="p-6 bg-white rounded-xl shadow">
+            <h3 class="font-bold">Front-End Developer</h3>
+            <p class="mt-2 text-sm text-gray-500">Building responsive, modern, and user-friendly web interfaces.</p>
+          </div>
+          <div class="p-6 bg-white rounded-xl shadow">
+            <h3 class="font-bold">UX - UI Design</h3>
+            <p class="mt-2 text-sm text-gray-500">User-focused interfaces.</p>
+          </div>
+          <div class="p-6 bg-white rounded-xl shadow">
+            <h3 class="font-bold">Web Design</h3>
+            <p class="mt-2 text-sm text-gray-500">Modern responsive sites.</p>
+          </div>
+          <div class="p-6 bg-white rounded-xl shadow">
+            <h3 class="font-bold">Branding</h3>
+            <p class="mt-2 text-sm text-gray-500">Full identity and guidelines.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h2 class="text-3xl font-extrabold">About Me</h2>
+          <p class="mt-4 text-gray-600">I am a dynamic Front-End Developer and Creative UI/UX Designer, passionate about crafting engaging digital experiences. Along with building clean, responsive, and user-friendly interfaces, I also design visually appealing product experiences that combine creativity with functionality. My focus is on delivering designs that not only look beautiful but also provide smooth and intuitive user journeys.</p>
+          <ul class="mt-6 space-y-3 text-sm text-gray-600">
+            <li>✔ Front-End Developer</li>
+            <li>✔ UI UX Desginer</li>
+            <li>✔ Web Application</li>
+            <li>✔ AI Expert</li>
+            <li>✔ SEO</li>
+            <li>✔ Smart Working With 
+              Artificial Intelligence AI</li>
+            <li>✔ Vibe coding</li>
+          </ul>
+          <div class="mt-6">
+            <a href="https://drive.google.com/uc?export=download&id=1RhFg0c80V2ePfZdpKBj7j5wPuTPpY5sW"
+   target="_blank"
+   class="inline-block px-6 py-3 bg-indigo-600 text-white rounded-lg">
+   Download CV
+</a>
+          </div>
+        </div>
+        <div>
+          <div class="space-y-6">
+            <div>
+              <p class="text-sm font-medium">Coding <span class="float-right">90%</span></p>
+              <div class="w-full bg-gray-200 h-3 rounded-full mt-2 overflow-hidden">
+                <div class="h-full progress-bg" style="width:90%"></div>
+              </div>
+            </div>
+              <div>
+              <p class="text-sm font-medium">UI UX <span class="float-right">95%</span></p>
+              <div class="w-full bg-gray-200 h-3 rounded-full mt-2 overflow-hidden">
+                <div class="h-full progress-bg" style="width:95%"></div>
+              </div>
+            <div>
+              <p class="text-sm font-medium">Design <span class="float-right">88%</span></p>
+              <div class="w-full bg-gray-200 h-3 rounded-full mt-2 overflow-hidden">
+                <div class="h-full progress-bg" style="width:88%"></div>
+              </div>
+            </div>
+            <div>
+              <p class="text-sm font-medium">Marketing <span class="float-right">85%</span></p>
+              <div class="w-full bg-gray-200 h-3 rounded-full mt-2 overflow-hidden">
+                <div class="h-full progress-bg" style="width:85%"></div>
+              </div>
+              <div>
+              <p class="text-sm font-medium">AI Expert <span class="float-right">95%</span></p>
+              <div class="w-full bg-gray-200 h-3 rounded-full mt-2 overflow-hidden">
+                <div class="h-full progress-bg" style="width:95%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center">
+          <h2 class="text-3xl font-extrabold">Portfolio</h2>
+          <p class="mt-2 text-gray-600">Selected projects</p>
+        </div>
+        <div class="mt-6 flex justify-center space-x-3">
+          <button class="filter-btn px-4 py-2 rounded-md bg-indigo-100" data-filter="all">All</button>
+          <button class="filter-btn px-4 py-2 rounded-md" data-filter="web">Web Design</button>
+          <button class="filter-btn px-4 py-2 rounded-md" data-filter="print">UI UX</button>
+          <button class="filter-btn px-4 py-2 rounded-md" data-filter="mock">Mockups</button>
+        </div>
+        <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="projects">
+          <!-- project card -->
+          <div class="project-item p-4 bg-white rounded-xl shadow" data-category="web">
+            <img src="https://i.pinimg.com/736x/ed/9e/a9/ed9ea99c79d7fced446fd14db3585c74.jpg" alt="proj" class="rounded-md h-48 w-full object-cover">
+            <h3 class="mt-3 font-bold">Branding Creative Design</h3>
+            <p class="text-sm text-gray-500">Web Design</p>
+          </div>
+
+          <div class="project-item p-4 bg-white rounded-xl shadow" data-category="web">
+            <img src="https://i.pinimg.com/736x/6c/7e/b1/6c7eb15fa6d71dc1d63ed2553623be6c.jpg" alt="proj" class="rounded-md h-48 w-full object-cover">
+            <h3 class="mt-3 font-bold">Branding Creative Design</h3>
+            <p class="text-sm text-gray-500">Web Design</p>
+          </div>
+
+          <div class="project-item p-4 bg-white rounded-xl shadow" data-category="web">
+            <img src="https://i.pinimg.com/736x/20/b7/eb/20b7eb08d06b0f46a961b9f15abaf349.jpg" alt="proj" class="rounded-md h-48 w-full object-cover">
+            <h3 class="mt-3 font-bold">Branding Creative Design</h3>
+            <p class="text-sm text-gray-500">Web Design</p>
+          </div>
+
+           <div class="project-item p-4 bg-white rounded-xl shadow" data-category="web">
+            <img src="https://i.pinimg.com/736x/40/09/33/400933e4a016664b51d131eea19ca143.jpg" alt="proj" class="rounded-md h-48 w-full object-cover">
+            <h3 class="mt-3 font-bold">E-commerce Website</h3>
+            <p class="text-sm text-gray-500">Web Design</p>
+          </div>
+
+
+
+          <div class="project-item p-4 bg-white rounded-xl shadow" data-category="print">
+            <img src="https://i.pinimg.com/736x/89/ef/d4/89efd48550de00e988954e148c9f1f06.jpg" alt="proj" class="rounded-md h-48 w-full object-cover">
+            <h3 class="mt-3 font-bold">Design</h3>
+            <p class="text-sm text-gray-500">UI UX</p>
+          </div>
+
+          <div class="project-item p-4 bg-white rounded-xl shadow" data-category="mock">
+            <img src="https://i.pinimg.com/736x/2c/a5/c4/2ca5c4ec05fcf0e0868d702cb670e3ae.jpg" alt="proj" class="rounded-md h-48 w-full object-cover">
+            <h3 class="mt-3 font-bold">Product Mockup</h3>
+            <p class="text-sm text-gray-500">Mockups</p>
+          </div>
+
+          <div class="project-item p-4 bg-white rounded-xl shadow" data-category="mock">
+            <img src="https://i.pinimg.com/736x/f2/36/57/f23657a7c38ff9fd964bec4e2a7447f5.jpg" alt="proj" class="rounded-md h-48 w-full object-cover">
+            <h3 class="mt-3 font-bold">Product Mockup Set</h3>
+            <p class="text-sm text-gray-500">Mockups</p>
+          </div>
+
+
+          <div class="project-item p-4 bg-white rounded-xl shadow" data-category="web">
+            <img src="https://i.pinimg.com/736x/c6/0c/0c/c60c0c960a41d79213ba0460726b90a5.jpg" alt="proj" class="rounded-md h-48 w-full object-cover">
+            <h3 class="mt-3 font-bold">E-commerce Website</h3>
+            <p class="text-sm text-gray-500">Web Design</p>
+          </div>
+
+          <div class="project-item p-4 bg-white rounded-xl shadow" data-category="print">
+            <img src="https://i.pinimg.com/736x/36/73/8d/36738dfac1540c95a4b21dfd56545c20.jpg" alt="proj" class="rounded-md h-48 w-full object-cover">
+            <h3 class="mt-3 font-bold">Design</h3>
+            <p class="text-sm text-gray-500">UI UX</p>
+          </div>
+
+          <div class="project-item p-4 bg-white rounded-xl shadow" data-category="print">
+            <img src="https://i.pinimg.com/736x/09/96/ad/0996adaa5a08f257a5a30bceb35da7c3.jpg" alt="proj" class="rounded-md h-48 w-full object-cover">
+            <h3 class="mt-3 font-bold">Design</h3>
+            <p class="text-sm text-gray-500">UI UX</p>
+          </div>
+
+          <div class="project-item p-4 bg-white rounded-xl shadow" data-category="print">
+            <img src="https://i.pinimg.com/736x/29/e9/cf/29e9cf24c8b1597b8171954c6e72a9d2.jpg" alt="proj" class="rounded-md h-48 w-full object-cover">
+            <h3 class="mt-3 font-bold">Design</h3>
+            <p class="text-sm text-gray-500">UI UX</p>
+          </div>
+
+          <div class="project-item p-4 bg-white rounded-xl shadow" data-category="mock">
+            <img src="https://i.pinimg.com/736x/80/3f/c4/803fc4d7392e2bafcb51d7de1e2fd844.jpg" alt="proj" class="rounded-md h-48 w-full object-cover">
+            <h3 class="mt-3 font-bold">Product Mockup Set</h3>
+            <p class="text-sm text-gray-500">Mockups</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+ <!-- TESTIMONIALS -->
+<section id="testimonials" class="py-16 bg-indigo-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    
+    <div class="text-center">
+      <h2 class="text-3xl font-extrabold text-gray-900">
+        Client Testimonials
+      </h2>
+      <p class="mt-3 text-gray-600">
+        Feedback from clients and project collaborations.
+      </p>
+    </div>
+
+    <div class="grid gap-6 mt-12 md:grid-cols-2">
+      
+   <!-- Testimonial 1 -->
+<div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+  <p class="text-gray-600 italic">
+    "Working with him was a great experience. He created a clean,
+    modern portfolio website that perfectly reflected my personal
+    brand. Communication was smooth, and the final result exceeded
+    my expectations."
+  </p>
+
+  <div class="mt-5">
+    <h4 class="font-bold text-gray-900">Michael Anderson</h4>
+    <p class="text-sm text-indigo-600">
+      Personal Brand Consultant, USA
+    </p>
+
+    <!-- 5 Star Rating -->
+    <div class="flex justify-center md:justify-start mt-3 text-blue-600 text-lg">
+      ★★★★★
+    </div>
+  </div>
+</div>
+
+      <!-- Testimonial 2 -->
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+        <p class="text-gray-600 italic">
+          "The mockup design was professional, detailed, and visually
+          appealing. Requirements were understood quickly, and the final
+          delivery matched exactly what I had envisioned."
+        </p>
+        <div class="mt-5">
+          <h4 class="font-bold text-gray-900">Ahmed Raza</h4>
+          <p class="text-sm text-indigo-600">
+            Marketing Manager, Lahore
+          </p>
+          <!-- 5 Star Rating -->
+    <div class="flex justify-center md:justify-start mt-3 text-blue-600 text-lg">
+      ★★★★★
+    </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+        <p class="text-gray-600 italic">
+          "The mockups were clean, modern, and highly detailed. They
+          helped us visualize our product before development and saved
+          valuable time during the planning stage."
+        </p>
+        <div class="mt-5">
+          <h4 class="font-bold text-gray-900">Usman Khalid</h4>
+          <p class="text-sm text-indigo-600">
+            Startup Founder, Karachi
+          </p>
+          <!-- 5 Star Rating -->
+    <div class="flex justify-center md:justify-start mt-3 text-blue-600 text-lg">
+      ★★★★★
+    </div>
+
+        </div>
+      </div>
+
+      <!-- Testimonial 4 -->
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+        <p class="text-gray-600 italic">
+          "The UI/UX design was intuitive, user-friendly, and visually
+          impressive. Attention to detail and a strong understanding of
+          user experience made the project a success."
+        </p>
+        <div class="mt-5">
+          <h4 class="font-bold text-gray-900">Hassan Ali</h4>
+          <p class="text-sm text-indigo-600">
+            Product Owner, Islamabad
+          </p>
+          <!-- 5 Star Rating -->
+    <div class="flex justify-center md:justify-start mt-3 text-blue-600 text-lg">
+      ★★★★★
+    </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+   
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-16 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6">
+    <div class="text-center">
+      <h2 class="text-3xl font-extrabold">Contact</h2>
+      <p class="mt-2 text-gray-600">Get in touch</p>
+    </div>
+    <div class="mt-8 grid md:grid-cols-2 gap-8">
+      <!-- Left side Contact Info -->
+      <div class="bg-indigo-50 p-6 rounded-xl">
+        <h3 class="font-bold">Contact Info</h3>
+        <p class="mt-4 text-sm text-gray-600">Email: Ranaateeq1715@gmail.com</p>
+        <p class="mt-2 text-sm text-gray-600">Phone: +92 0323-4049047</p>
+        <p class="mt-2 text-sm text-gray-600">Address: Marghzar colony Rana Town Multan road Lahore</p>
+      </div>
+      
+      <!-- Right side Instagram Button -->
+      <div class="flex flex-col justify-center items-center bg-indigo-50 p-6 rounded-xl">
+        <p class="mt-4 text-center">You can also contact us on Instagram:</p>
+        <div class="text-center mt-4">
+          <a href="https://www.instagram.com/ateeq_15_rana/" target="_blank">
+            <button class="px-6 py-3 bg-gradient-to-r from-purple-500 via-indigo-600 to-blue-500 text-white rounded-lg">Instagram</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-6 bg-gray-100">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center text-sm text-gray-600">
+        © Ateeq Rana 2025 — All rights reserved.
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // portfolio filter
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('bg-indigo-100'));
+        btn.classList.add('bg-indigo-100');
+        const f = btn.getAttribute('data-filter');
+        document.querySelectorAll('.project-item').forEach(item => {
+          if(f === 'all' || item.dataset.category === f){
+            item.style.display = '';
+          } else {
+            item.style.display = 'none';
+          }
+        })
+      })
+    });
+
+    // set default filter to all
+    document.querySelector('.filter-btn[data-filter="all"]').click();
+  </script>
+</body>
+</html>
